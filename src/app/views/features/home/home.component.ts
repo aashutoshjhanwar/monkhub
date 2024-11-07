@@ -20,7 +20,7 @@ export class HomeComponent {
   }
 
 
-
+//calling api to get product list
   getProductList() {
     this.homeService.GetProductList().subscribe({
       next: (result: IProductList[]) => {
