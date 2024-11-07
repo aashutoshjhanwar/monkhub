@@ -1,0 +1,74 @@
+
+  
+  .card-img-top {
+    max-width: 100%;
+    min-height: 300px;
+    max-height: 300px;
+    height: auto;
+  }
+  
+
+.section-title{
+    font-weight: 700;
+}
+
+.product-card {
+    max-height: 800px;
+    min-height: 600px;
+    border: 1px solid #ccc;
+    transition: border 0.3s;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .product-card:hover {
+    border-color: red;
+  }
+  
+  .product-image {
+    position: relative;
+  }
+  
+  .discount-tag,
+  .new-tag {
+    position: absolute;
+    top: 10px;
+    padding: 2px 5px;
+    background-color: red;
+    color: white;
+    font-size: 0.8rem;
+  }
+  
+  .discount-tag {
+    right: 8px;
+  }
+  
+  .new-tag {
+    right: 10px;
+  }
+  
+  .price .current-price {
+    font-weight: bold;
+  }
+  
+  .rating i {
+    color: gold;
+  }
+  
+  .actions i {
+    cursor: pointer;
+  }
+  
+  .add-to-cart {
+    display: none;
+  }
+  
+  .product-card:hover .add-to-cart {
+    display: block;
+  }
+  .new-badge-tag{
+    text-align: right;
+    margin-right: 50px;
+  }
+  

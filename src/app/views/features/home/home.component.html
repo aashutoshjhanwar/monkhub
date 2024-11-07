@@ -1,0 +1,73 @@
+<div class="container mt-5 mb-5">
+    <!-- Section title for the New Products -->
+    <span class="section-title">
+        <h4>New Products</h4>
+    </span>
+
+    <!-- Row for displaying the product cards -->
+    <div class="row">
+        <!-- Loop through each product in the productList array and display it in a column -->
+        <div class="col-md-3" *ngFor="let product of productList">
+            <div class="card product-card mt-4" (mouseenter)="showAddToCart = true"
+                (mouseleave)="showAddToCart = false">
+                <!-- Discount tag shown if product has a discount for now we are displaying it based on price -->
+                <div *ngIf="product.price" class="discount-tag">-63%</div>
+
+                <!-- "NEW" label shown if product is new for now we are displaying it based on price -->
+                <div *ngIf="product.price" class="new-badge-tag">NEW</div>
+
+                <!-- Product image section -->
+                <div class="product-image">
+                    <img [src]="product.image" alt="{{ product.title }}" class="card-img-top" />
+                </div>
+
+                <!-- Product details section -->
+                <div class="card-body text-center">
+                    <!-- Category of the product -->
+                    <p class="category">{{ product.category }}</p>
+
+                    <!-- Product title -->
+                    <h5 class="product-name">{{ truncateTitle(product) }}</h5>
+
+                    <!-- Price section with current price and original price (if available) -->
+                    <div class="price">
+                        <span class="current-price text-danger me-2 fs-3">${{ product.price }}</span>
+                        <span *ngIf="product.price" class="original-price  text-muted">
+                            <del>$500</del> <!-- Display original price crossed out -->
+                        </span>
+                    </div>
+
+                    <!-- Product rating displayed as stars -->
+                    <div class="rating text-warning">
+                        <!-- Full stars based on the product's rating -->
+                        <ng-container *ngFor="let _ of getFullStars(product.rating.rate)">
+                            <i class="fa fa-star"></i>
+                        </ng-container>
+
+                        <!-- Half star if the rating includes a half star -->
+                        <i *ngIf="hasHalfStar(product.rating.rate)" class="fa fa-star-half-o"></i>
+
+                        <!-- Empty stars for remaining rating out of 5 -->
+                        <ng-container *ngFor="let _ of getEmptyStars(product.rating.rate)">
+                            <i class="fa fa-star-o"></i>
+                        </ng-container>
+                    </div>
+
+                    <hr>
+
+                    <!-- Actions section with icons for wishlist, compare, and view options -->
+                    <div class="actions mt-2">
+                        <i class="fa fa-heart-o mx-2"></i> <!-- Wishlist icon -->
+                        <i class="fa fa-exchange mx-2"></i> <!-- Compare icon -->
+                        <i class="fa fa-eye mx-2"></i> <!-- View icon -->
+                    </div>
+                </div>
+
+                <!-- 'Add to Cart' button shown only when hovering over the product card -->
+                <button class="btn btn-danger add-to-cart" *ngIf="showAddToCart">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

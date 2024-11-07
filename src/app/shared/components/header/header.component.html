@@ -1,0 +1,141 @@
+<!-- Top Bar Section: Contains contact information and account section -->
+<div class="top-bar bg-dark text-white py-2">
+    <div class="container d-flex justify-content-between">
+        <!-- Header Icons Section (Contact info and email, location) -->
+        <div class="header-icons">
+            <!-- Phone Number -->
+            <i class="fa fa-phone"></i> +021-95-51-84
+            <!-- Email Address -->
+            <i class="fa fa-envelope ms-3"></i> {{email}}
+            <!-- Location -->
+            <i class="fa fa-map-marker ms-3" aria-hidden="true"></i> 1734 Stonecoal Road
+        </div>
+
+        <!-- Account Section: Currency and account options -->
+        <div class="header-icons account-section">
+            <!-- Currency -->
+            <i class="fa fa-usd ms-3" aria-hidden="true"></i> USD
+            <!-- Account link -->
+            <i class="fa fa-user-o ms-3" aria-hidden="true"></i> My Account
+        </div>
+    </div>
+</div>
+
+<!-- Main Navbar Section: Primary navigation bar for the site -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <!-- Brand logo with name -->
+        <a class="navbar-brand" href="#">Electro<span class="text-danger">.</span></a>
+
+        <!-- Navbar Toggler (for mobile view) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Form Section: For search and category selection -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <!-- Main Search Form (hidden on mobile view) -->
+            <form class="d-flex flex-grow-1 mx-lg-5 mt-3 mt-lg-0 hide-mob">
+                <!-- Category Select Dropdown -->
+                <select class="form-select" aria-label="All Categories">
+                    <option selected>All Categories</option>
+                    <option value="1">Laptops</option>
+                    <option value="2">Smartphones</option>
+                    <option value="3">Cameras</option>
+                </select>
+                <!-- Search Input Field -->
+                <input class="form-control" type="search" placeholder="Search here" aria-label="Search">
+                <!-- Search Button -->
+                <button class="btn btn-danger" type="submit">Search</button>
+            </form>
+
+            <!-- Wishlist and Cart Section (hidden on mobile view) -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mt-3 mt-lg-0 hide-mob">
+                <!-- Wishlist Item -->
+                <li class="nav-item me-4 icon-link-nav">
+                    <a class="icon-link" href="#">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        <!-- Badge showing the number of items in the wishlist -->
+                        <span class="badge bg-danger">2</span><br />
+                        Your Wishlist
+                    </a>
+                </li>
+                <!-- Shopping Cart Item -->
+                <li class="nav-item icon-link-nav">
+                    <a class="icon-link" href="#">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <!-- Badge showing the number of items in the cart -->
+                        <span class="badge bg-danger">3</span><br />
+                        Your Cart
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Navbar Links visible on mobile (for navigation) -->
+            <ul class="navbar-nav visible-link-mob">
+                <!-- Navigation Items for mobile view -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hot Deals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Laptops</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Smartphones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cameras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Accessories</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Secondary Navbar Section: Used for additional links and categories -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light links-section">
+    <div class="container">
+        <!-- Navbar Toggler for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks"
+            aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links (collapsed section) -->
+        <div class="collapse navbar-collapse" id="navbarLinks">
+            <!-- Navigation Items for secondary navbar -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hot Deals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Laptops</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Smartphones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cameras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Accessories</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
